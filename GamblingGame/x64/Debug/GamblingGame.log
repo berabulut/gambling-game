@@ -1,0 +1,11 @@
+﻿  FileOperator.cpp
+  GamblingGame.cpp
+C:\Users\betab\Pictures\cpp\New\GamblingGame\GamblingGame.cpp(15,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Game.cpp
+C:\Users\betab\Pictures\cpp\New\GamblingGame\Game.cpp(113,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Player.cpp
+  Screen.cpp
+C:\Users\betab\Pictures\cpp\New\GamblingGame\Screen.cpp(57,130): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\betab\Pictures\cpp\New\GamblingGame\Screen.cpp(58,160): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  GamblingGame.vcxproj -> C:\Users\betab\Pictures\cpp\New\GamblingGame\x64\Debug\GamblingGame.exe
