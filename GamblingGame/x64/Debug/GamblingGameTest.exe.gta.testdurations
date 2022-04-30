@@ -4,5 +4,15 @@
   <TestDurations>
     <TestDuration Test="PlayerTest.GetName" Duration="1" />
     <TestDuration Test="PlayerTest.GetNameShouldNotBeEqual" Duration="1" />
+    <TestDuration Test="PlayerTest.GetCash" Duration="1" />
+    <TestDuration Test="PlayerTest.GetCashShouldNotBeEqual" Duration="1" />
+    <TestDuration Test="PlayerTest.CalculateRoundBet" Duration="1" />
+    <TestDuration Test="PlayerTest.CalculateRoundBetShouldNotBeEqual" Duration="1" />
+    <TestDuration Test="PlayerTest.HasPlayerWonRound" Duration="1" />
+    <TestDuration Test="PlayerTest.SetNewCash" Duration="1" />
+    <TestDuration Test="PlayerTest.SetNewCashLostRound" Duration="1" />
+    <TestDuration Test="PlayerTest.SetNewCashWonRound" Duration="1" />
+    <TestDuration Test="FileOperatorTest.Parse" Duration="4" />
+    <TestDuration Test="FileOperatorTest.TestCWD" Duration="1" />
   </TestDurations>
 </GtaTestDurations>
