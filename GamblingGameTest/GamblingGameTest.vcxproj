@@ -57,6 +57,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="EmptyKisiler.txt" />
     <Text Include="Kisiler.txt" />
   </ItemGroup>
   <ItemDefinitionGroup />

@@ -12,7 +12,9 @@
     <TestDuration Test="PlayerTest.SetNewCash" Duration="1" />
     <TestDuration Test="PlayerTest.SetNewCashLostRound" Duration="1" />
     <TestDuration Test="PlayerTest.SetNewCashWonRound" Duration="1" />
-    <TestDuration Test="FileOperatorTest.Parse" Duration="4" />
+    <TestDuration Test="FileOperatorTest.Parse" Duration="1" />
     <TestDuration Test="FileOperatorTest.TestCWD" Duration="1" />
+    <TestDuration Test="FileOperatorTest.ParseFileNotFound" Duration="1" />
+    <TestDuration Test="FileOperatorTest.ParseFileIsEmpty" Duration="1" />
   </TestDurations>
 </GtaTestDurations>

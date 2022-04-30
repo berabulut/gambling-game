@@ -38,5 +38,10 @@ std::vector<std::vector<std::string>> FileOperator::Parse()
 
 	ReadFile.close();
 
+	if (rows.size() < 1) {
+		std::string exceptionMessage = "File named " + this->filePath + " doesn't exists or empty";
+		throw std::invalid_argument(exceptionMessage);
+	}
+
 	return rows;
 }

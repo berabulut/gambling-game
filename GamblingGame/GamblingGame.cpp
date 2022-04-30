@@ -13,9 +13,18 @@
 int main()
 {
     srand(time(0));
+    std::vector<std::vector<std::string>> rows;
 
-    FileOperator fileOperator("Kisiler.txt", "#");
-    std::vector<std::vector<std::string>> rows = fileOperator.Parse();
+    try {
+        FileOperator fileOperator("Kisiler.txt", "#");
+        rows = fileOperator.Parse();
+    }
+    catch (std::invalid_argument& e)
+    {
+        std::cerr << e.what() << std::endl;
+        return -1;
+    }
+    
     std::vector<Player> players;
 
     for (int i = 0; i < rows.size(); i++) {

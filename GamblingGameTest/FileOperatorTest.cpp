@@ -12,3 +12,14 @@ TEST(FileOperatorTest, Parse) {
 	delete fop;
 }
 
+TEST(FileOperatorTest, ParseFileNotFound) {
+	FileOperator* fop = new FileOperator("Kisiler.txt", "#");
+	ASSERT_THROW(fop->Parse(), std::invalid_argument);
+	delete fop;
+}
+
+TEST(FileOperatorTest, ParseFileIsEmpty) {
+	FileOperator* fop = new FileOperator("../../../GamblingGameTest/EmptyKisiler.txt", "#");
+	ASSERT_THROW(fop->Parse(), std::invalid_argument);
+	delete fop;
+}
