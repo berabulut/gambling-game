@@ -5,10 +5,13 @@ Game::Game(std::vector<Player> players)
 	this->players = players;
 }
 
-bool Game::playRound()
+std::vector<Player> Game::getPlayers()
 {
-	int winnerNumber = generateWinnerNumber();
+	return this->players;
+}
 
+bool Game::playRound(int winnerNumber)
+{
 	for (int i = 0; i < this->players.size(); i++)
 	{
 		if (this->players[i].hasPlayerWonRound(winnerNumber)) {
@@ -72,11 +75,6 @@ void Game::withdrawCash(double cash)
 void Game::depositCash(double cash)
 {
 	this->cash += cash;
-}
-
-int Game::generateWinnerNumber()
-{
-	return (rand() % 10) + 1;
 }
 
 

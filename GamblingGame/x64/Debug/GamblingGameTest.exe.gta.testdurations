@@ -16,10 +16,25 @@
     <TestDuration Test="FileOperatorTest.TestCWD" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileNotFound" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileIsEmpty" Duration="1" />
-    <TestDuration Test="ScreenTest.Render" Duration="39" />
+    <TestDuration Test="ScreenTest.Render" Duration="14" />
     <TestDuration Test="ScreenTest.RenderTop" Duration="1" />
     <TestDuration Test="ScreenTest.RenderMiddle" Duration="1" />
     <TestDuration Test="ScreenTest.RenderBottom" Duration="1" />
     <TestDuration Test="ScreenTest.EndingScreen" Duration="1" />
+    <TestDuration Test="GameTest.GetRound" Duration="1" />
+    <TestDuration Test="GameTest.IncrementRound" Duration="1" />
+    <TestDuration Test="GameTest.GetCash" Duration="1" />
+    <TestDuration Test="GameTest.DepositCash" Duration="1" />
+    <TestDuration Test="GameTest.WithdrawCash" Duration="1" />
+    <TestDuration Test="GameTest.GenerateWinnerNumber" Duration="1" />
+    <TestDuration Test="GameTest.findWealthiestPlayer" Duration="1" />
+    <TestDuration Test="GameTest.FindWealthiestPlayer" Duration="1" />
+    <TestDuration Test="GameTest.WillEliminatePlayer" Duration="1" />
+    <TestDuration Test="GameTest.GetPlayers" Duration="1" />
+    <TestDuration Test="GameTest.EliminatePlayers" Duration="1" />
+    <TestDuration Test="GameTest.RenderScreen" Duration="58" />
+    <TestDuration Test="GameTest.PlayRoundGameContinues" Duration="13" />
+    <TestDuration Test="RandomNumberTest.GenerateNumberBetween" Duration="2" />
+    <TestDuration Test="GameTest.PlayRoundGameEnds" Duration="12" />
   </TestDurations>
 </GtaTestDurations>

@@ -15,7 +15,9 @@ private:
 public:
 	Game(std::vector<Player> players);
 
-	bool playRound();
+	std::vector<Player> getPlayers();
+
+	bool playRound(int winnerNumber);
 
 	int getRound();
 	void incrementRound();
@@ -24,8 +26,6 @@ public:
 
 	void withdrawCash(double cash);
 	void depositCash(double cash);
-
-	int generateWinnerNumber();
 
 	static bool willEliminatePlayer(Player player);
 	void eliminatePlayers();

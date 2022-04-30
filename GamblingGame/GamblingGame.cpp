@@ -9,6 +9,7 @@
 #include "FileOperator.h"
 #include "Player.h"
 #include "Game.h"
+#include "RandomNumber.h"
 
 int main()
 {
@@ -37,8 +38,11 @@ int main()
     }
 
     Game game(players);
+    RandomNumber randomNumber;
 
-    while (game.playRound()) {
+    while (true) {
+        int winnerNumber = randomNumber.GenerateBetween(1, 10);
+        if (!game.playRound(winnerNumber)) break;
         std::this_thread::sleep_for(std::chrono::milliseconds(200)); continue;
     }
 }

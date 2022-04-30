@@ -1,3 +1,3 @@
 ﻿  GamblingGame.cpp
-C:\Users\betab\Pictures\cpp\New\GamblingGame\GamblingGame.cpp(15,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\betab\Pictures\cpp\New\GamblingGame\GamblingGame.cpp(16,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   GamblingGame.vcxproj -> C:\Users\betab\Pictures\cpp\New\GamblingGame\x64\Debug\GamblingGame.exe
