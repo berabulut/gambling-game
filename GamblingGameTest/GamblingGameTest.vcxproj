@@ -34,12 +34,15 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ScreenTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GamblingGame\FileOperator.cpp" />
     <ClCompile Include="..\GamblingGame\Player.cpp" />
+    <ClCompile Include="..\GamblingGame\Screen.cpp" />
     <ClCompile Include="FileOperatorTest.cpp" />
     <ClCompile Include="PlayerTest.cpp" />
+    <ClCompile Include="ScreenTest.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

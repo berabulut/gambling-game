@@ -16,5 +16,10 @@
     <TestDuration Test="FileOperatorTest.TestCWD" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileNotFound" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileIsEmpty" Duration="1" />
+    <TestDuration Test="ScreenTest.Render" Duration="39" />
+    <TestDuration Test="ScreenTest.RenderTop" Duration="1" />
+    <TestDuration Test="ScreenTest.RenderMiddle" Duration="1" />
+    <TestDuration Test="ScreenTest.RenderBottom" Duration="1" />
+    <TestDuration Test="ScreenTest.EndingScreen" Duration="1" />
   </TestDurations>
 </GtaTestDurations>
