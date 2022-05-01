@@ -16,7 +16,7 @@
     <TestDuration Test="FileOperatorTest.TestCWD" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileNotFound" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileIsEmpty" Duration="1" />
-    <TestDuration Test="ScreenTest.Render" Duration="54" />
+    <TestDuration Test="ScreenTest.Render" Duration="12" />
     <TestDuration Test="ScreenTest.RenderTop" Duration="1" />
     <TestDuration Test="ScreenTest.RenderMiddle" Duration="1" />
     <TestDuration Test="ScreenTest.RenderBottom" Duration="1" />
@@ -37,6 +37,20 @@
     <TestDuration Test="RandomNumberTest.GenerateNumberBetween" Duration="2" />
     <TestDuration Test="GameTest.PlayRoundGameEnds" Duration="12" />
     <TestDuration Test="RoundResultTest.GetGameEnded" Duration="1" />
-    <TestDuration Test="GameTest.PlayRoundGame" Duration="0" />
+    <TestDuration Test="GameTest.PlayRoundGame" Duration="1" />
+    <TestDuration Test="RoundResultTest.GetWinnerNumber" Duration="1" />
+    <TestDuration Test="RoundResultTest.GetRoundPlayed" Duration="1" />
+    <TestDuration Test="RoundResultTest.GetTableCash" Duration="1" />
+    <TestDuration Test="RoundResultTest.GetWealthiestPlayer" Duration="1" />
+    <TestDuration Test="IntegrationTest.CannotStartGameWithEmptyPlayerName" Duration="1" />
+    <TestDuration Test="IntegrationTest.CannotStartGameWithCashLessThan1000" Duration="1" />
+    <TestDuration Test="IntegrationTest.CannotStartGameWithInvalidBetRate" Duration="1" />
+    <TestDuration Test="IntegrationTest.CannotStartGameWithInvalidLuckyNumber" Duration="1" />
+    <TestDuration Test="IntegrationTest.TableCashCanBeLessThanZero" Duration="1" />
+    <TestDuration Test="IntegrationTest.PlayerWinRound" Duration="1" />
+    <TestDuration Test="IntegrationTest.PlayerLoseRound" Duration="1" />
+    <TestDuration Test="IntegrationTest.GameContinues" Duration="1" />
+    <TestDuration Test="IntegrationTest.GameEnds" Duration="1" />
+    <TestDuration Test="IntegrationTest.SimulateGame" Duration="208" />
   </TestDurations>
 </GtaTestDurations>

@@ -47,6 +47,7 @@
     <ClCompile Include="..\GamblingGame\Screen.cpp" />
     <ClCompile Include="FileOperatorTest.cpp" />
     <ClCompile Include="GameTest.cpp" />
+    <ClCompile Include="IntegrationTest.cpp" />
     <ClCompile Include="PlayerTest.cpp" />
     <ClCompile Include="RandomNumberTest.cpp" />
     <ClCompile Include="RoundResultTest.cpp" />
@@ -69,7 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="EmptyKisiler.txt" />
+    <Text Include="KisiBetRateProblem.txt" />
+    <Text Include="KisiCashProblem.txt" />
     <Text Include="Kisiler.txt" />
+    <Text Include="KisiLuckyNumberProblem.txt" />
+    <Text Include="KisiNameProblem.txt" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

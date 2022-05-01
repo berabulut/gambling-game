@@ -55,15 +55,22 @@ TEST_F(GameTest, FindWealthiestPlayer) {
 }
 
 TEST_F(GameTest, WillEliminatePlayer) {
-	ASSERT_EQ(false, game->willEliminatePlayer(Player("p1", 1001, 0.58, 5)));
-	ASSERT_EQ(true, game->willEliminatePlayer(Player("p2", 999, 0.58, 5)));
+	Player p1 ("p1", 1000, 0.58, 5);
+	ASSERT_EQ(false, game->willEliminatePlayer(p1));
+
+	Player p2("p2", 1000, 0.58, 5);
+	p2.setNewCash(false);
+	ASSERT_EQ(true, game->willEliminatePlayer(p2));
 }
 
 TEST_F(GameTest, EliminatePlayers) {
 	std::vector<Player> players = {
-		Player("p1", 999, 0.58, 5),
+		Player("p1", 1000, 0.58, 5),
 		Player("p2", 1000, 0.15, 3)
 	};
+
+	players[0].setNewCash(false);
+
 	Game* g = new Game(players);
 	g->eliminatePlayers();
 
@@ -77,20 +84,23 @@ TEST_F(GameTest, EliminatePlayers) {
 
 
 TEST_F(GameTest, PlayRoundGame) {
-	int winnerNumber = 5;
+	Game* g = new Game(players);
+
+	int winnerNumber = 9;
 	double tableCash = players[0].calculateRoundBet() + players[1].calculateRoundBet();
-	Player wp = players[0];
-	wp.setNewCash(true);
-	RoundResult expected(false, winnerNumber, 1, tableCash, &wp);
+	Player wp = players[1];
+	wp.setNewCash(false);
+	
+	RoundResult got = g->playRound(9);
 
-	RoundResult got = game->playRound(5);
 
+	ASSERT_EQ(false, got.getGameEnded());
+	ASSERT_EQ(1, got.getRoundPlayed());
+	ASSERT_EQ(tableCash, got.getTableCash());
+	ASSERT_EQ(winnerNumber, got.getWinnerNumber());
+	ASSERT_EQ(wp.getName(), got.getWealthiestPlayer().getName());
 
-	ASSERT_EQ(expected.getGameEnded(), got.getGameEnded());
-	ASSERT_EQ(expected.getRoundPlayed(), got.getRoundPlayed());
-	ASSERT_EQ(expected.getTableCash(), got.getTableCash());
-	ASSERT_EQ(expected.getWinnerNumber(), got.getWinnerNumber());
-	ASSERT_EQ(expected.getWealthiestPlayer().getName(), got.getWealthiestPlayer().getName());
+	delete g;
 }
 
 GameTest::~GameTest()

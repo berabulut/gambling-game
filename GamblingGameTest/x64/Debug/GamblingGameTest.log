@@ -1,7 +1,10 @@
-﻿  Game.cpp
-  Player.cpp
-  Screen.cpp
-C:\Users\betab\Pictures\cpp\New\GamblingGame\Screen.cpp(57,130): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\betab\Pictures\cpp\New\GamblingGame\Screen.cpp(58,160): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
+﻿  IntegrationTest.cpp
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(174,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\betab\Pictures\cpp\New\GamblingGameTest\IntegrationTest.cpp(195,1): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   GamblingGameTest.vcxproj -> C:\Users\betab\Pictures\cpp\New\GamblingGame\x64\Debug\GamblingGameTest.exe
