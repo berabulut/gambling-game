@@ -35,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="GameTest.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="RoundResultTest.h" />
     <ClInclude Include="ScreenTest.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,11 +43,13 @@
     <ClCompile Include="..\GamblingGame\Game.cpp" />
     <ClCompile Include="..\GamblingGame\Player.cpp" />
     <ClCompile Include="..\GamblingGame\RandomNumber.cpp" />
+    <ClCompile Include="..\GamblingGame\RoundResult.cpp" />
     <ClCompile Include="..\GamblingGame\Screen.cpp" />
     <ClCompile Include="FileOperatorTest.cpp" />
     <ClCompile Include="GameTest.cpp" />
     <ClCompile Include="PlayerTest.cpp" />
     <ClCompile Include="RandomNumberTest.cpp" />
+    <ClCompile Include="RoundResultTest.cpp" />
     <ClCompile Include="ScreenTest.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">

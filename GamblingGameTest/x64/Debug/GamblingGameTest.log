@@ -1,15 +1,7 @@
-﻿  FileOperatorTest.cpp
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\FileOperatorTest.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  GameTest.cpp
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(5,33): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(6,30): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(58,2): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(59,2): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(64,28): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(65,29): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(80,28): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(81,29): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(98,28): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\betab\Pictures\cpp\New\GamblingGameTest\GameTest.cpp(99,28): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  Game.cpp
+  Player.cpp
+  Screen.cpp
+C:\Users\betab\Pictures\cpp\New\GamblingGame\Screen.cpp(57,130): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\betab\Pictures\cpp\New\GamblingGame\Screen.cpp(58,160): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Generating Code...
   GamblingGameTest.vcxproj -> C:\Users\betab\Pictures\cpp\New\GamblingGame\x64\Debug\GamblingGameTest.exe

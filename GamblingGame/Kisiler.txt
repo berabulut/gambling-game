@@ -1,7 +1,7 @@
 Raphael Adams#4000000#0.15#5
 Huseyin Bera Bulut#5000000#0.25#2
-Fatih Kaya#4422400#0.35#9
-Enes Furkan Olcay#3000000#0.25#1
+Fatih Kaya#4422400#1#9
+Enes Furkan Olcay#3000000#0.25#10
 Murat Gungor#3334320#0.45#7
 Alperen Birol#6334302#0.39#3
 Melih Sivri#3334000#0.22#8

@@ -144,11 +144,13 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RandomNumber.cpp" />
+    <ClCompile Include="RoundResult.cpp" />
     <ClCompile Include="Screen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileOperator.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="RoundResult.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RandomNumber.h" />
     <ClInclude Include="Screen.h" />

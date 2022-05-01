@@ -16,7 +16,7 @@
     <TestDuration Test="FileOperatorTest.TestCWD" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileNotFound" Duration="1" />
     <TestDuration Test="FileOperatorTest.ParseFileIsEmpty" Duration="1" />
-    <TestDuration Test="ScreenTest.Render" Duration="14" />
+    <TestDuration Test="ScreenTest.Render" Duration="54" />
     <TestDuration Test="ScreenTest.RenderTop" Duration="1" />
     <TestDuration Test="ScreenTest.RenderMiddle" Duration="1" />
     <TestDuration Test="ScreenTest.RenderBottom" Duration="1" />
@@ -36,5 +36,7 @@
     <TestDuration Test="GameTest.PlayRoundGameContinues" Duration="13" />
     <TestDuration Test="RandomNumberTest.GenerateNumberBetween" Duration="2" />
     <TestDuration Test="GameTest.PlayRoundGameEnds" Duration="12" />
+    <TestDuration Test="RoundResultTest.GetGameEnded" Duration="1" />
+    <TestDuration Test="GameTest.PlayRoundGame" Duration="0" />
   </TestDurations>
 </GtaTestDurations>

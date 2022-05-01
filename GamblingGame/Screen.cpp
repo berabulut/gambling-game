@@ -66,6 +66,7 @@ void Screen::EndingScreen(int round, int tableCash)
 	PositionTableToMiddle(); std::cout << "##             OYUN BITTI                  ##\n";
 	PositionTableToMiddle(); std::cout << "##                                         ##\n";
 	PositionTableToMiddle(); std::cout << "##                                         ##\n";
+	PositionTableToMiddle(); std::cout << "##                                         ##\n";
 	PositionTableToMiddle(); FillRowWithSymbol(); std::cout << "\n";
 }
 
@@ -74,7 +75,9 @@ void Screen::Render(bool gameEnded, int round, int tableCash, int winnerNumber, 
 	system("CLS");
 
 	if (gameEnded) {
+		std::cout << "\n\n\n\n";
 		EndingScreen(round, tableCash);
+		std::cout << "\n\n\n";
 		return;
 	}
 

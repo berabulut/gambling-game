@@ -2,7 +2,8 @@
 #include <vector>
 
 #include "Player.h"
-#include "Screen.h"
+#include "RoundResult.h"
+
 
 
 class Game {
@@ -10,14 +11,13 @@ private:
 	int round = 0;
 	double cash = 0;
 	std::vector<Player> players;
-	Screen screen;
 
 public:
 	Game(std::vector<Player> players);
 
 	std::vector<Player> getPlayers();
 
-	bool playRound(int winnerNumber);
+	RoundResult playRound(int winnerNumber);
 
 	int getRound();
 	void incrementRound();
@@ -31,6 +31,4 @@ public:
 	void eliminatePlayers();
 
 	Player findWealthiestPlayer();
-
-	void DrawScreen(bool gameEnded, int winnerNumber, Player wealthiestPlayer);
 };

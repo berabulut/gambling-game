@@ -6,6 +6,7 @@
 #include <chrono>
 #include <thread>
 
+#include "Screen.h"
 #include "FileOperator.h"
 #include "Player.h"
 #include "Game.h"
@@ -19,8 +20,7 @@ int main()
     try {
         FileOperator fileOperator("Kisiler.txt", "#");
         rows = fileOperator.Parse();
-    }
-    catch (std::invalid_argument& e)
+    } catch (std::invalid_argument& e)
     {
         std::cerr << e.what() << std::endl;
         return -1;
@@ -28,21 +28,38 @@ int main()
     
     std::vector<Player> players;
 
-    for (int i = 0; i < rows.size(); i++) {
-        std::string name = rows[i][0];
-        double startingCash = std::stod(rows[i][1]);
-        float betRate = std::stof(rows[i][2]);
-        int luckyNumber = std::stoi(rows[i][3]);
-        Player player(name, startingCash, betRate, luckyNumber);
-        players.push_back(player);
+    try {
+        for (int i = 0; i < rows.size(); i++) {
+            std::string name = rows[i][0];
+            double startingCash = std::stod(rows[i][1]);
+            float betRate = std::stof(rows[i][2]);
+            int luckyNumber = std::stoi(rows[i][3]);
+            Player player(name, startingCash, betRate, luckyNumber);
+            players.push_back(player);
+        }
+    } catch (std::invalid_argument& e)
+    {
+        std::cerr << e.what() << std::endl;
+        return -1;
     }
 
     Game game(players);
     RandomNumber randomNumber;
+    Screen screen;
 
     while (true) {
         int winnerNumber = randomNumber.GenerateBetween(1, 10);
-        if (!game.playRound(winnerNumber)) break;
+        RoundResult roundResult = game.playRound(winnerNumber);
+        screen.Render(
+            roundResult.getGameEnded(), 
+            roundResult.getRoundPlayed(), 
+            roundResult.getTableCash(), 
+            roundResult.getWinnerNumber(), 
+            roundResult.getWealthiestPlayer()
+        );
+
+        if (roundResult.getGameEnded()) break;
+
         std::this_thread::sleep_for(std::chrono::milliseconds(200)); continue;
     }
 }

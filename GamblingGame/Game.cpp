@@ -10,13 +10,14 @@ std::vector<Player> Game::getPlayers()
 	return this->players;
 }
 
-bool Game::playRound(int winnerNumber)
+RoundResult Game::playRound(int winnerNumber)
 {
+	incrementRound();
 	for (int i = 0; i < this->players.size(); i++)
 	{
 		if (this->players[i].hasPlayerWonRound(winnerNumber)) {
 			// Reduce table's cash
-			this->withdrawCash(this->players[i].calculateRoundBet());
+			this->withdrawCash(this->players[i].calculateRoundBet() * 10);
 
 			// Increase player's cash
 			this->players[i].setNewCash(true);
@@ -36,19 +37,8 @@ bool Game::playRound(int winnerNumber)
 
 	// Eliminate players who has cash under 1000
 	eliminatePlayers();
-
-	// Show round's result 
-	this->DrawScreen(this->players.size() <= 0, winnerNumber, wealthiestPlayer);
-
-	if (this->players.size() <= 0) {
-		// Game is over
-		return false;
-	}
-
-	incrementRound();
-
-	// Game should continue another round
-	return true;
+	
+	return RoundResult(this->players.size() <= 0, winnerNumber, this->getRound(), this->getCash(), new Player(wealthiestPlayer));
 }
 
 int Game::getRound()
@@ -104,9 +94,4 @@ Player Game::findWealthiestPlayer()
 	}
 
 	return wealthtiestPlayer;
-}
-
-void Game::DrawScreen(bool gameEnded, int winnerNumber, Player wealthiestPlayer)
-{
-	this->screen.Render(gameEnded, this->getRound(), this->getCash(), winnerNumber, wealthiestPlayer);
 }

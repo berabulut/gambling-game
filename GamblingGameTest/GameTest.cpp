@@ -75,33 +75,22 @@ TEST_F(GameTest, EliminatePlayers) {
 }
 
 
-TEST_F(GameTest, RenderScreen) {
-	std::vector<Player> players = {
-		Player("p1", 999, 0.58, 5),
-		Player("p2", 1000, 0.15, 3)
-	};
-	Game* g = new Game(players);
-	Player wp = g->findWealthiestPlayer();
 
-	ASSERT_NO_THROW(g->DrawScreen(false, 5, wp));
-	ASSERT_NO_THROW(g->DrawScreen(true, 5, wp));
+TEST_F(GameTest, PlayRoundGame) {
+	int winnerNumber = 5;
+	double tableCash = players[0].calculateRoundBet() + players[1].calculateRoundBet();
+	Player wp = players[0];
+	wp.setNewCash(true);
+	RoundResult expected(false, winnerNumber, 1, tableCash, &wp);
 
-	delete g;
-}
+	RoundResult got = game->playRound(5);
 
-TEST_F(GameTest, PlayRoundGameContinues) {
-	ASSERT_EQ(true, game->playRound(5));
-}
 
-TEST_F(GameTest, PlayRoundGameEnds) {
-	std::vector<Player> players = {
-	Player("p1", 1001, 0.58, 5),
-	Player("p2", 1000, 0.58, 3),
-	};
-	Game* g = new Game(players);
-	ASSERT_EQ(false, g->playRound(1));
-
-	delete g;
+	ASSERT_EQ(expected.getGameEnded(), got.getGameEnded());
+	ASSERT_EQ(expected.getRoundPlayed(), got.getRoundPlayed());
+	ASSERT_EQ(expected.getTableCash(), got.getTableCash());
+	ASSERT_EQ(expected.getWinnerNumber(), got.getWinnerNumber());
+	ASSERT_EQ(expected.getWealthiestPlayer().getName(), got.getWealthiestPlayer().getName());
 }
 
 GameTest::~GameTest()
